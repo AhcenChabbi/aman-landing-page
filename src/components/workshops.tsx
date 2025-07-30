@@ -4,6 +4,7 @@ import Image from "next/image";
 import JoinLink from "./join-link";
 import { motion } from "framer-motion";
 import { ctaMobileVariants } from "@/lib/variants";
+import workshopPicture from "../../public/images/workshopPicture.png";
 const WORKSHOP_DATA = {
   title: "ورش العمل",
   description: (
@@ -39,6 +40,7 @@ export default function Workshops() {
             duration: 0.3,
             ease: "easeInOut",
           }}
+          viewport={{ once: true, amount: 0.5 }}
           className="space-y-3"
         >
           <div className="relative space-y-1.5">
@@ -77,18 +79,20 @@ export default function Workshops() {
             duration: 0.4,
             ease: "easeInOut",
           }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <Image
-            src="/images/workshopPicture.svg"
+            src={workshopPicture}
             alt="صورة توضيحية لورش العمل"
             width={500}
-            height={500}
+            placeholder="blur"
           />
         </motion.div>
         <motion.div
           variants={ctaMobileVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
         >
           <JoinLink href="/" className="mx-auto w-fit text-white md:hidden" />
         </motion.div>

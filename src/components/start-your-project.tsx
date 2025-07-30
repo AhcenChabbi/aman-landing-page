@@ -13,7 +13,7 @@ import ProjectIdeaCard from "./project-idea-card";
 
 export default function StartYourProject() {
   return (
-    <section id="startyourproject" className="space-y-6">
+    <section id="startyourproject" className="space-y-6 py-8">
       <div className="flex items-start justify-between">
         <div className="space-y-3">
           <motion.h3
@@ -21,6 +21,7 @@ export default function StartYourProject() {
             initial="hidden"
             whileInView="visible"
             className="text-right text-2xl font-bold md:text-3xl"
+            viewport={{ once: true, amount: 0.5 }}
           >
             ابدأ مشروعك
           </motion.h3>
@@ -29,6 +30,7 @@ export default function StartYourProject() {
             initial="hidden"
             whileInView="visible"
             className="max-w-md text-right text-gray-600"
+            viewport={{ once: true, amount: 0.5 }}
           >
             هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
             النص من مولد النص العربى، مولد النص العربى مفيد.
@@ -38,6 +40,7 @@ export default function StartYourProject() {
           variants={ctaVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
         >
           <JoinLink href="/" className="hidden w-fit text-white md:flex" />
         </motion.div>
@@ -48,6 +51,7 @@ export default function StartYourProject() {
         initial="hidden"
         whileInView="visible"
         className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        viewport={{ once: true, amount: 0.5 }}
       >
         {projectsIdeas.map((project) => (
           <ProjectIdeaCard
@@ -62,6 +66,7 @@ export default function StartYourProject() {
         variants={ctaMobileVariants}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
       >
         <JoinLink href="/" className="mx-auto w-fit text-white md:hidden" />
       </motion.div>

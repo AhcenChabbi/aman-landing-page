@@ -1,19 +1,12 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import JoinLink from "./join-link";
+import heroPictureRow from "../../public/images/heroPictureRow.png";
+import heroPictureCol from "../../public/images/heroPictureCol.png";
 const Hero = () => {
   return (
-    <section className="flex flex-col-reverse items-center gap-y-3 py-4 md:flex-row md:justify-between md:py-12">
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{
-          duration: 0.3,
-          ease: "easeInOut",
-        }}
-        className="flex flex-col justify-center gap-y-3 text-white"
-      >
+    <div className="flex flex-col-reverse items-center gap-y-3 py-4 md:flex-row md:justify-between md:py-12">
+      <div className="flex flex-col justify-center gap-y-3 text-white">
         <div className="space-y-4 text-center md:text-right">
           <h1 className="text-2xl font-bold md:text-4xl">
             مرحبًا بك في مجتمع أكثر أمانًا!
@@ -25,30 +18,26 @@ const Hero = () => {
           </p>
         </div>
         <JoinLink href="/" className="self-center md:self-start" />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-      >
+      </div>
+      <div>
         <Image
-          src="/images/heroPictureRow.svg"
+          src={heroPictureRow}
           alt="hero picture"
           width={500}
-          height={500}
           className="hidden md:block"
           lang="ar"
+          placeholder="blur"
         />
         <Image
-          src="/images/heroPictureCol.svg"
+          src={heroPictureCol}
           alt="hero picture"
           width={350}
-          height={350}
           className="h-full md:hidden"
           lang="ar"
+          placeholder="blur"
         />
-      </motion.div>
-    </section>
+      </div>
+    </div>
   );
 };
 

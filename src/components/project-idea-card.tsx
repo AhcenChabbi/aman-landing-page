@@ -14,6 +14,7 @@ export default function ProjectIdeaCard({
     <motion.div
       variants={cardVariants}
       className="group flex gap-x-2 rounded-lg bg-white/10 px-4 py-6 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-[#040914]"
+      viewport={{ once: true, amount: 0.5 }}
     >
       <div className="bg-primary flex items-center justify-center self-start rounded-md p-2 text-white shadow">
         {Icon}

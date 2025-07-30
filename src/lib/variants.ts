@@ -23,22 +23,18 @@ export const cardVariants: Variants = {
 export const titleVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 50,
   },
   visible: {
     opacity: 1,
-    y: 0,
     transition: { duration: DURATION, ease: "easeInOut" },
   },
 };
 export const descriptionVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 100,
   },
   visible: {
     opacity: 1,
-    y: 0,
     transition: { duration: 0.5, ease: "easeInOut", delay: DURATION },
   },
 };

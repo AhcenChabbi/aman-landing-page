@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  cardVariants,
   containerVariants,
   descriptionVariants,
   titleVariants,
@@ -11,13 +10,14 @@ import { partnersLogos } from "@/lib/data";
 
 export default function Partners() {
   return (
-    <section id="partners" className="space-y-6">
+    <section id="partners" className="space-y-6 py-8">
       <div className="space-y-3">
         <motion.h5
           variants={titleVariants}
           initial="hidden"
           whileInView="visible"
           className="text-right text-2xl font-bold md:text-3xl"
+          viewport={{ once: true, amount: 0.5 }}
         >
           الشركاء
         </motion.h5>
@@ -26,6 +26,7 @@ export default function Partners() {
           initial="hidden"
           whileInView="visible"
           className="max-w-md text-right text-gray-600"
+          viewport={{ once: true, amount: 0.5 }}
         >
           هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
           النص من مولد النص العربى، مولد النص العربى مفيد.
@@ -35,23 +36,18 @@ export default function Partners() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        className="scrollbar-hidden flex justify-between gap-4 overflow-x-scroll"
+        className="scrollbar-hidden flex items-center justify-between gap-x-4 overflow-x-scroll"
+        viewport={{ once: true, amount: 0.5 }}
       >
         {partnersLogos.map((logo) => (
-          <motion.div
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
+          <Image
             key={logo.id}
-          >
-            <Image
-              src={logo.src}
-              alt={`شعار الشريك ${logo.companyName}`}
-              width={170}
-              height={170}
-              className="size-28 flex-shrink-0 md:size-32"
-            />
-          </motion.div>
+            src={logo.src}
+            alt={`شعار الشريك ${logo.companyName}`}
+            width={170}
+            height={170}
+            className="size-28 flex-shrink-0 md:size-32"
+          />
         ))}
       </motion.div>
     </section>

@@ -15,6 +15,7 @@ export default function InnovationProjects() {
         variants={titleVariants}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
         className="text-right text-2xl font-bold md:text-3xl"
       >
         مشاريع الابتكار
@@ -24,6 +25,7 @@ export default function InnovationProjects() {
         initial="hidden"
         whileInView="visible"
         className="max-w-md text-right text-gray-600"
+        viewport={{ once: true, amount: 0.5 }}
       >
         هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
         النص من مولد النص العربى، مولد النص العربى مفيد.
@@ -33,6 +35,7 @@ export default function InnovationProjects() {
         initial="hidden"
         whileInView="visible"
         className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        viewport={{ once: true, amount: 0.5 }}
       >
         {projects.map((project) => (
           <ProjectCard

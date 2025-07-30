@@ -1,48 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
-const socialMediaLinks = [
-  {
-    id: "facebook",
-    src: "/images/socialMediaLogos/facebook.svg",
-    url: "https://www.facebook.com",
-  },
-  {
-    id: "dribble",
-    src: "/images/socialMediaLogos/dribble.svg",
-    url: "https://www.dribble.com",
-  },
-  {
-    id: "behance",
-    src: "/images/socialMediaLogos/linkedin.svg",
-    url: "https://www.linkedin.com",
-  },
-  {
-    id: "x",
-    src: "/images/socialMediaLogos/X.svg",
-    url: "https://www.x.com",
-  },
-  {
-    id: "github",
-    src: "/images/socialMediaLogos/github.svg",
-    url: "https://www.github.com",
-  },
-];
+import { contactInfo, socialMediaLinks } from "@/lib/data";
 
-const contactInfo = [
-  {
-    id: "1",
-    icon: MapPin,
-    title: "العنوان",
-    description: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،",
-  },
-  {
-    id: "2",
-    icon: Phone,
-    title: "رقم الهاتف",
-    description: "+1 234 567 890",
-  },
-];
 export default function Footer() {
   return (
     <div
@@ -104,7 +63,7 @@ const Card = ({
     <div className="flex gap-x-1.5">
       {Icon}
       <div className="space-y-0.5">
-        <h5 className="font-normal">{title}</h5>
+        <p className="font-normal">{title}</p>
         <p className="text-sm font-extralight text-gray-400">{description}</p>
       </div>
     </div>
