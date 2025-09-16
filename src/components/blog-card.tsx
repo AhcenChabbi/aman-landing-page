@@ -32,9 +32,13 @@ const BlogCard = ({
       <div className="space-y-2">
         <div className="space-y-1">
           <span className="text-primary text-sm font-semibold">{date}</span>
-          <h3 className="text-base font-semibold">{title}</h3>
+          <h3 title={title} className="line-clamp-1 text-base font-semibold">
+            {title}
+          </h3>
         </div>
-        <p className="text-sm text-gray-600">{description}</p>
+        <p title={description} className="line-clamp-2 text-sm text-gray-600">
+          {description}
+        </p>
         <div className="text-primary w-fit rounded-full border border-[#FCCEEE] bg-[#FDF2FA] px-2 py-0.5 text-sm">
           {category}
         </div>

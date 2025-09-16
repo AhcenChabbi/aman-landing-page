@@ -9,32 +9,7 @@ import {
 } from "@/lib/variants";
 import BlogCard from "./blog-card";
 import DisplayAllLink from "./display-all-link";
-const blogs = [
-  {
-    img: "/images/blogsImages/blog1.png",
-    date: "28 فبراير 2023",
-    title: "1 اسم الموضوع",
-    description:
-      "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،  مولد النص العربى مفيد.",
-    category: "القسم الذي ينتمي اليه الموضوع",
-  },
-  {
-    img: "/images/blogsImages/blog2.png",
-    date: "28 فبراير 2023",
-    title: "2 اسم الموضوع",
-    description:
-      "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،  مولد النص العربى مفيد.",
-    category: "القسم الذي ينتمي اليه الموضوع",
-  },
-  {
-    img: "/images/blogsImages/blog3.png",
-    date: "28 فبراير 2023",
-    title: "3 اسم الموضوع",
-    description:
-      "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،  مولد النص العربى مفيد.",
-    category: "القسم الذي ينتمي اليه الموضوع",
-  },
-];
+import { blogs } from "@/lib/data";
 
 export default function Blog() {
   return (
@@ -57,8 +32,7 @@ export default function Blog() {
             className="max-w-md text-right text-gray-600"
             viewport={{ once: true, amount: 0.5 }}
           >
-            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
-            النص من مولد النص العربى، مولد النص العربى مفيد.
+            تابع أحدث المقالات والموضوعات المرتبطة بالسلامة والاستدامة:
           </motion.p>
         </div>
         <motion.div

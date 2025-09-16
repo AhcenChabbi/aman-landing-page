@@ -11,10 +11,10 @@ const Hero = () => {
           <h1 className="text-2xl font-bold md:text-4xl">
             مرحبًا بك في مجتمع أكثر أمانًا!
           </h1>
-          <p className="text-lg leading-relaxed md:text-xl">
-            نسعى لتحسين السلامة والوعي في مجتمعاتنا.
-            <br />
-            انضم إلينا لنبني مستقبلًاأكثر أمانًا للجميع.
+          <p className="max-w-md text-lg leading-relaxed md:text-xl">
+            نسعى في أمان إلى تعزيز مفاهيم السلامة والوعي في مختلف جوانب حياتنا
+            اليومية، من خلال مبادرات ومشاريع مبتكرة تسهم في حماية الأفراد
+            والمجتمع. انضموا إلينا لبناء مستقبل يسوده الأمان والاستدامة.
           </p>
         </div>
         <JoinLink href="/" className="self-center md:self-start" />
@@ -26,7 +26,6 @@ const Hero = () => {
           width={500}
           className="hidden md:block"
           lang="ar"
-          placeholder="blur"
         />
         <Image
           src={heroPictureCol}
@@ -34,7 +33,6 @@ const Hero = () => {
           width={350}
           className="h-full md:hidden"
           lang="ar"
-          placeholder="blur"
         />
       </div>
     </div>

@@ -27,8 +27,8 @@ export default function InnovationProjects() {
         className="max-w-md text-right text-gray-600"
         viewport={{ once: true, amount: 0.5 }}
       >
-        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
-        النص من مولد النص العربى، مولد النص العربى مفيد.
+        نؤمن أن الابتكار هو الركيزة الأساسية لبناء مجتمع أكثر أماناً. ومن هذا
+        المنطلق، نعمل على تطوير وتنفيذ مشاريع نوعية تسهم في تعزيز ثقافة السلامة.
       </motion.p>
       <motion.div
         variants={containerVariants}

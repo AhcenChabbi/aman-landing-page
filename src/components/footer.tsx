@@ -18,8 +18,9 @@ export default function Footer() {
               alt="شعار شركة أمان"
             />
             <p className="max-w-xs text-sm font-extralight">
-              هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-              هذا النص من مولد النص العربى، مولد النص العربى مفيد.
+              شركة أمان هي مؤسسة رائدة تسعى إلى تعزيز ثقافة السلامة والوعي
+              المجتمعي من خلال مشاريع ابتكارية، برامج تدريبية، وشراكات
+              استراتيجية، بهدف بناء مستقبل آمن ومستدام للجميع.
             </p>
           </div>
           <div className="flex gap-x-5">
@@ -42,7 +43,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-center text-sm text-gray-400 md:text-right">
-            جميع الحقوق محفوظة لشركة أمان{" "}
+            جميع الحقوق محفوظة © شركة أمان 2025
           </p>
         </div>
       </footer>

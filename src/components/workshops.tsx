@@ -1,33 +1,10 @@
 "use client";
-import { Building } from "lucide-react";
 import Image from "next/image";
 import JoinLink from "./join-link";
 import { motion } from "framer-motion";
 import { ctaMobileVariants } from "@/lib/variants";
 import workshopPicture from "../../public/images/workshopPicture.png";
-const WORKSHOP_DATA = {
-  title: "ورش العمل",
-  description: (
-    <>
-      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
-      من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
-      الأخرى
-      <br />
-      <br />
-      إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر
-      من الفقرات
-    </>
-  ),
-  tags: [
-    { id: "1", icon: Building, title: "1 عنوان العنصر" },
-    { id: "2", icon: Building, title: "2 عنوان العنصر" },
-    { id: "3", icon: Building, title: "3 عنوان العنصر" },
-    { id: "4", icon: Building, title: "4 عنوان العنصر" },
-  ],
-  ctaText: "قدم طلب إنضمام",
-  ctaLink: "/",
-  image: "/images/workshopPicture.svg",
-};
+import { workshopTags } from "@/lib/data";
 
 export default function Workshops() {
   return (
@@ -46,7 +23,7 @@ export default function Workshops() {
           <div className="relative space-y-1.5">
             <div className="flex gap-x-2">
               <h4 className="text-right text-2xl font-bold md:text-3xl">
-                {WORKSHOP_DATA.title}
+                ورش العمل
               </h4>
               <Image
                 src="images/arrow.svg"
@@ -57,11 +34,13 @@ export default function Workshops() {
               />
             </div>
             <p className="max-w-md text-right text-gray-600">
-              {WORKSHOP_DATA.description}
+              نقدّم برامج تدريبية وورش عمل متخصصة تهدف إلى بناء القدرات وتزويد
+              المشاركين بالمهارات الأساسية في مجال السلامة العامة وإدارة
+              المخاطر.
             </p>
           </div>
           <div className="flex max-w-md flex-wrap gap-x-2 gap-y-3">
-            {WORKSHOP_DATA.tags.map(({ icon: Icon, id, title }) => (
+            {workshopTags.map(({ icon: Icon, id, title }) => (
               <div key={id} className="flex items-center gap-x-1">
                 <div className="text-primary rounded-full bg-white p-2 shadow">
                   <Icon />
